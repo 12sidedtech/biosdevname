@@ -25,7 +25,8 @@ pushd _builddir
 make -e distcheck
 make -e srpm
 
-. version
+chmod +x version
+. ./version
 
 popd
 git tag -u $SIGNING_KEY -m "tag for official release: $PACKAGE_STRING" v${PACKAGE_VERSION}
@@ -40,6 +41,6 @@ for i in *.tar.{gz,bz2} *.zip dist/SRPMS/*.src.rpm; do
 done
 
 # Generate GPG signature
-gpg --output $DEST/$PACKAGE_NAME-$PACKAGE_VERSION.tar.gz.sign --detach-sig $DEST/$PACKAGE_NAME-$PACKAGE_VERSION.tar.gz -u $SIGNING_KEY
+gpg -u $SIGNING_KEY --output $DEST/$PACKAGE_NAME-$PACKAGE_VERSION.tar.gz.sign --detach-sig $DEST/$PACKAGE_NAME-$PACKAGE_VERSION.tar.gz
 
 git push --tags origin master:master
