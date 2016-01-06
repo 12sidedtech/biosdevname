@@ -1,3 +1,10 @@
+biosdevname (0.7.1-1) stable; urgency=medium
+
+  * Internal 12Sided Tech packaging
+  * Update to current latest upstream release
+
+ -- Phil Vachon <pvachon@12sidedtech.com>  Wed, 06 Jan 2016 18:15:12 -0500
+
 biosdevname (0.5.1-1) unstable; urgency=medium
 
   * Package for Debian (Closes: #617820).
