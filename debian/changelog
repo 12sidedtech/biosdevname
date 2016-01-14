@@ -1,3 +1,9 @@
+biosdevname (0.7.1-2) stable; urgency=medium
+
+  * Tweak release - fix udev rule
+
+ -- Phil Vachon <pvachon@12sidedtech.com>  Wed, 13 Jan 2016 18:59:53 -0500
+
 biosdevname (0.7.1-1) stable; urgency=medium
 
   * Internal 12Sided Tech packaging
